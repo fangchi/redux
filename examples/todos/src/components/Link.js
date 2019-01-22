@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Link = ({ active, children, onClick }) => (
+const Link = ({ active, children, onClickProp,onHover }) => (
     <button
-       onClick={onClick}
+       onClick={onClickProp}
+       onMouseEnter={onHover}
        disabled={active}
        style={{
            marginLeft: '4px',
@@ -16,7 +17,8 @@ const Link = ({ active, children, onClick }) => (
 Link.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClickProp: PropTypes.func.isRequired,
+  onHover:PropTypes.func.isRequired
 }
 
 export default Link

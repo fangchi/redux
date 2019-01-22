@@ -1,4 +1,5 @@
 const todos = (state = [], action) => {
+  console.info('todos:'+JSON.stringify(action));
   switch (action.type) {
     case 'ADD_TODO':
       return [
